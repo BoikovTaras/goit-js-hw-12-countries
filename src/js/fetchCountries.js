@@ -1,3 +1,7 @@
+const countryArea = document.querySelector('.country-block');
+console.log(countryArea);
+
+
 export default class CountryInformation {
     constructor() { };
     countryInformation() {
@@ -7,7 +11,7 @@ export default class CountryInformation {
 
 import countryCard from '../templates/country-card.hbs';
 
-const url = 'https://restcountries.com/v2/name/peru';
+const url = 'https://restcountries.com/v3.1/name/peru';
 fetch(url)
     .then(response => {
         return response.json();
@@ -15,7 +19,7 @@ fetch(url)
     .then(country => {
         console.log(country);
         const countryResult = countryCard(country);
-        console.log(countryResult);
+        countryArea.innerHTML = countryResult;
     })
     .catch(error => {
         console.log(error)
