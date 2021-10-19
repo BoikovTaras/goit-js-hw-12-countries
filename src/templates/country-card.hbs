@@ -1,13 +1,13 @@
-<img class="country-flag js-country-flag" src="{{0.flags.png}}" alt="{{0.name.common}}">
+<img class="country-flag js-country-flag" src="{{0.flags.png}}" alt="{{0.name}}">
 
-<h1 class="country js-country">{{0.name.common}}</h1>
+<h1 class="country js-country">{{0.name}}</h1>
 <p class="capital js-capital"><b>Capital:</b>{{0.capital}}</p>
 <p class="population js-population"><b>Population:</b>{{0.population}}</p>
 <p class="languages js-languages">
     <b>Language:</b>
 <ul class="languages-list js-languages-list">
     {{#each 0.languages}}
-    <li class="languages-item js-languages-item">{{this}}</li>
+    <li class="languages-item js-languages-item">{{this.name}}</li>
     {{/each}}
 </ul>
 </p>
