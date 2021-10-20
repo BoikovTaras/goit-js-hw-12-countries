@@ -1,13 +1,19 @@
-<img class="country-flag js-country-flag" src="{{0.flags.png}}" alt="{{0.name}}">
-
-<h1 class="country js-country">{{0.name}}</h1>
-<p class="capital js-capital"><b>Capital:</b>{{0.capital}}</p>
-<p class="population js-population"><b>Population:</b>{{0.population}}</p>
-<p class="languages js-languages">
-    <b>Language:</b>
-<ul class="languages-list js-languages-list">
-    {{#each 0.languages}}
-    <li class="languages-item js-languages-item">{{this.name}}</li>
-    {{/each}}
-</ul>
-</p>
+<h1 class='title'>{{0.name}}</h1>
+<div class='country_box'>
+    <div class='country_list-box'>
+        <ul class='country_select'>
+            <li class='country_item'><b>Capital:</b><span class='country_item-value'>{{0.capital}}</span></li>
+            <li class='country_item'><b>Population:</b><span class='country_item-value'>{{0.population}}</span></li>
+            <li class='country_item'><b>Languages:</b>
+                <ul class='languages_list'>
+                    {{#each 0.languages}}
+                    <li class='languages_item'>{{this.name}}</li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class='country_img-box'>
+        <img class='country_img' width='350' height='200' src={{0.flags.png}} alt='country_flag' />
+    </div>
+</div>

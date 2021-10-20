@@ -4,11 +4,17 @@ import './sass/main.scss';
 // Файлы js
 import countryCard from './templates/country-card.hbs';
 import countryInformation from './js/fetchCountries.js';
+import { alert, notice, info, success, error, Stack } from '@pnotify/core';
+import "./sass/main.css";
+import "@pnotify/core/dist/PNotify.css";
+import "@pnotify/core/dist/BrightTheme.css";
+import * as Confirm from "@pnotify/confirm";
+import "@pnotify/confirm/dist/PNotifyConfirm.css";
 
 
 
 var debounce = require('lodash.debounce');
-const countryArea = document.querySelector('.country-block');
+const countryArea = document.querySelector('.country_block');
 const inputArea = document.querySelector('.js-input-area')
 
 
@@ -30,11 +36,31 @@ const fetchCountry = e => {
             .join('');
         } else if (country.length >= 10) {
             console.log('country >10', country);
+            const myStack = new Stack({
+                delay: 1000,
+                dir1: 'down',
+                dir2: 'left',
+                mode: 'light',
+                firstpos1: 25,
+                firstpos: 25,
+                spacing1: 36,
+                spacing2: 36,
+                push: 'top',
+                context: document.body,
+                positioned: true,
+                maxStrategy: 'close'
+            });
+            const myAlert = alert({
+                title: 'Oh no!',
+                text: "Too many matches found. Please enter a more specific query",
+                type: 'error',
+                stack: myStack,
+            });
         }
-
+        return country;
     })
     .catch(error => {
-        console.log('Борода')
+        console.log(error);
     })
 };
 

@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+body {
+  background-color: #b5b69f;
+}
+
+li {
+  margin-top: 10px;
+  font-family: 'Georama', sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 0.85;
+}
+
+ul {
+  font-family: 'Georama', sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 0.85;
+}
+
+.input_area {
+  background-color: white;
+  text-align: left;
+  color: #45485a;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 250px;
+  height: 40px;
+  border: 3px solid rgba(27, 23, 48, 0.651);
+  border-radius: 5px;
+}
+
+.input_area::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #1a2566;
+}
+
+.input_area:-ms-input-placeholder {
+  font-size: 18px;
+  color: #1a2566;
+}
+
+.input_area::-ms-input-placeholder {
+  font-size: 18px;
+  color: #1a2566;
+}
+
+.input_area::placeholder {
+  font-size: 18px;
+  color: #1a2566;
+}
+
+.input_area:hover, .input_area:focus {
+  outline: none;
+}
+
+.main_box {
+  position: relative;
+  margin-left: 45px;
+  margin-top: 15px;
+}
+
+.country {
+  padding-left: 0;
+}
+
+.title {
+  font-family: 'Georama', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 0.8;
+  margin-left: 200px;
+}
+
+.country_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 10px;
+  padding-top: 0px;
+}
+
+.country_list_item {
+  margin-top: 5px;
+}
+
+.country_list-box {
+  padding-left: 20px;
+}
+
+.country_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.country_item-value {
+  padding-left: 10px;
+}
+
+.country_img-box {
+  margin-left: 70px;
+}
+
+.languages_list {
+  margin-top: -10px;
+}
+
+.alert {
+  position: absolute;
+  right: 100px;
+  top: 15px;
+}
+/*# sourceMappingURL=main.css.map */

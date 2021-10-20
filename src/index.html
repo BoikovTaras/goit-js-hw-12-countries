@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Заголовок страницы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@1,500&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -11,17 +14,20 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="body-style">
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <form action="form">
-      <input id="contry-name" class="input-area js-input-area" type="text">
-    </form>
-    
-    <div class="country-block">
+  <body>
+    <div class="main_box">
+      <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+      <form>
+        <input id="contry-name" class="input_area js-input-area" type="text" placeholder="Enter country">
+      </form>
       
+      <div class="country_block">
+      
+      </div>
+      
+      <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     </div>
-
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    
     <script src="./index.js"></script>
   </body>
 </html>
